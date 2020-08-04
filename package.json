@@ -1,0 +1,15 @@
+{
+  "name": "next-js-multi-zones-example-with-base-path-and-rewrites",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:blog": "cd blog && yarn dev",
+    "dev:home": "cd home && yarn dev",
+    "dev": "concurrently 'yarn dev:blog' 'yarn dev:home' 'open http://localhost:3000'"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0"
+  }
+}
